@@ -1,41 +1,30 @@
-# vim-colors-off
+# Black&White Vim Colorscheme
 
-*This is very much a work in progress*
-
-For a number of weeks, I ran vim with `syntax off`. It was quite nice, 
-with only two annoyances:
-
-- Bright white on jet black was a bit off-putting.
-- There were cases when I did miss the lack of color, vimdiff for 
-  example.
-
-Therefore, I aimed to find or create a colorscheme to solve these two 
-issues.
-
-The result is very much based on the [pencil][] colorscheme, which is 
-surprising because it's a very colorful colorscheme, but:
-
-- It uses a very sane approach to defining and setting colors
-- It has nice background and foreground colors
-- In the areas where I do want color, I like how it colors things
-
-[pencil]: https://github.com/reedes/vim-colors-pencil
+Simple Vim colorscheme focused on black and white with occasional color accents when needed.
 
 ![Screenshot](shot.png)
 
-Slightly out of date, not super exciting...
 
 ## Installation
 
-- Use [Vundle][]
-- Add "pbrisbin/vim-colors-off" as a plugin
+For a basic install simply copy the color scheme file to your ~/.vim/colors directory.
 
-[vundle]: https://github.com/gmarik/Vundle.vim
+For full support in which the airline theme is available, install using Pathogen, Plug, Vundle or your favorite Vim package manager.
+
 
 ## Usage
 
-```
-:colorscheme off
+Just like any other color scheme:
+
+```vim
+:colorscheme pencil
 ```
 
-Supports both `background=light` and `background=dark`.
+You can toggle between the light and dark variants:
+
+```vim
+:set background=dark
+:set background=light
+```
+
+Like any other color scheme, you can add these commands to your `.vimrc`.

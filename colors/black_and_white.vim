@@ -157,7 +157,7 @@ call s:h("FoldColumn",    {"fg": s:bg_subtle})
 call s:h("DiffAdd",       {"fg": s:green})
 call s:h("DiffDelete",    {"fg": s:red})
 call s:h("DiffChange",    {"fg": s:dark_yellow})
-call s:h("DiffText",      {"fg": s:dark_blue})
+call s:h("DiffText",      {"fg": s:light_grey})
 call s:h("SignColumn",    {"fg": s:light_green})
 
 if has("gui_running")

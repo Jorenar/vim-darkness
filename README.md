@@ -27,4 +27,4 @@ You can toggle between the light and dark variants:
 :set background=light
 ```
 
-Like any other color scheme, you can add these commands to your `.vimrc`.
+Like any other commands, you can add these to your `.vimrc`.

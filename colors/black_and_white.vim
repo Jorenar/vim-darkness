@@ -57,7 +57,7 @@ if &background == "dark"
 else
     let s:bg              = s:actual_white
     let s:bg_subtle       = s:light_grey
-    let s:norm_inverted   = "lightgrey"
+    let s:norm_inverted   = s:light_grey
     let s:bg_inverted     = s:light_black
     let s:bg_very_subtle  = s:lighter_grey
     let s:cyan            = s:dark_cyan
@@ -191,10 +191,10 @@ hi link diffRemoved       DiffDelete
 hi link diffAdded         DiffAdd
 
 " Signify, git-gutter
-hi link SignifySignAdd              LineNr
-hi link SignifySignDelete           LineNr
-hi link SignifySignChange           LineNr
-hi link GitGutterAdd                LineNr
-hi link GitGutterDelete             LineNr
-hi link GitGutterChange             LineNr
-hi link GitGutterChangeDelete       LineNr
+hi link SignifySignAdd         LineNr
+hi link SignifySignDelete      LineNr
+hi link SignifySignChange      LineNr
+hi link GitGutterAdd           LineNr
+hi link GitGutterDelete        LineNr
+hi link GitGutterChange        LineNr
+hi link GitGutterChangeDelete  LineNr

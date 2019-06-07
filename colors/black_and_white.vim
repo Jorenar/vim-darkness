@@ -12,7 +12,7 @@ if exists('syntax on')
     syntax reset
 endif
 
-let g:colors_name='off'
+let g:colors_name='black_and_white'
 
 let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231" }
 let s:black           = { "gui": "#212121", "cterm": "0"   }
@@ -87,7 +87,6 @@ call s:h("Comment",       {"fg": s:bg_subtle, "gui": "italic"})
 
 hi! link VimCommentString Comment
 
-"call s:h("Constant",      {"fg": s:cyan})
 hi! link Constant         Normal
 hi! link Character        Constant
 hi! link Number           Constant
@@ -95,11 +94,9 @@ hi! link Boolean          Constant
 hi! link Float            Constant
 hi! link String           Constant
 
-"call s:h("Identifier",    {"fg": s:dark_blue})
 hi! link Identifier       Normal
 hi! link Function         Identifier
 
-"call s:h("Statement",     {"fg": s:green})
 hi! link Statement        Normal
 hi! link Conditonal       Statement
 hi! link Repeat           Statement
@@ -108,20 +105,17 @@ hi! link Operator         Statement
 hi! link Keyword          Statement
 hi! link Exception        Statement
 
-"call s:h("PreProc",       {"fg": s:red})
 hi! link PreProc          Normal
 hi! link Include          PreProc
 hi! link Define           PreProc
 hi! link Macro            PreProc
 hi! link PreCondit        PreProc
 
-"call s:h("Type",          {"fg": s:purple})
 hi! link Type             Normal
 hi! link StorageClass     Type
 hi! link Structure        Type
 hi! link Typedef          Type
 
-"call s:h("Special",       {"fg": s:pink})
 hi! link Special          Normal
 hi! link SpecialChar      Special
 hi! link Tag              Special

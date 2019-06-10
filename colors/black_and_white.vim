@@ -1,62 +1,56 @@
 " Name:       black_and_white.vim
-" Version:    0.1.5
+" Version:    0.2.0
 " License:    The MIT License (MIT)
 "
 " A colorscheme meant to look like a more pleasant version of syntax off
 "
 """
 
-hi clear
+" SETUP ------------------------------------------------------------------------
 
+" Set background to dark
+set background=dark
+
+" Reset syntax highlighting
+hi clear
 if exists('syntax on')
     syntax reset
 endif
 
+" Declare theme name
 let g:colors_name='black_and_white'
 
-let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231" }
-let s:black           = { "gui": "#212121", "cterm": "0"   }
+
+" DEFINE REUSABLE COLORS -------------------------------------------------------
+
+let s:almost_black    = { "gui": "#303030", "cterm": "234" }
+let s:black           = { "gui": "#000000", "cterm": "16"   }
 let s:blue            = { "gui": "#20BBFC", "cterm": "12"  }
 let s:dark_blue       = { "gui": "#008EC4", "cterm": "4"   }
 let s:dark_cyan       = { "gui": "#20A5BA", "cterm": "6"   }
 let s:dark_green      = { "gui": "#10A778", "cterm": "2"   }
-let s:dark_purple     = { "gui": "#523C79", "cterm": "5"   }
+let s:dark_grey       = { "gui": "#1c1c1c", "cterm": "236" }
 let s:dark_red        = { "gui": "#C30771", "cterm": "1"   }
 let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
 let s:darker_blue     = { "gui": "#005F87", "cterm": "18"  }
-let s:light_black     = { "gui": "#424242", "cterm": "8"   }
-let s:light_blue      = { "gui": "#b6d6fd", "cterm": "153" }
-let s:light_cyan      = { "gui": "#4FB8CC", "cterm": "14"  }
-let s:light_grey      = { "gui": "#B2B2B2", "cterm": "249" }
+let s:grey            = { "gui": "#424242", "cterm": "8"   }
 let s:light_green     = { "gui": "#5FD7A7", "cterm": "10"  }
-let s:light_purple    = { "gui": "#6855DE", "cterm": "13"  }
-let s:light_red       = { "gui": "#E32791", "cterm": "1"   }
-let s:lighter_black   = { "gui": "#545454", "cterm": "240" }
-let s:lighter_grey    = { "gui": "#C6C6C6", "cterm": "251" }
+let s:light_grey      = { "gui": "#B2B2B2", "cterm": "249" }
 let s:medium_grey     = { "gui": "#767676", "cterm": "243" }
-let s:dark_grey       = { "gui": "#1c1c1c", "cterm": "234" }
-let s:orange          = { "gui": "#D75F5F", "cterm": "167" }
 let s:red             = { "gui": "#fb007a", "cterm": "9"   }
-let s:subtle_black    = { "gui": "#303030", "cterm": "236" }
-let s:white           = { "gui": "#F1F1F1", "cterm": "15"  }
+let s:white           = { "gui": "#FFFFFF", "cterm": "15"  }
 let s:yellow          = { "gui": "#F3E430", "cterm": "11"  }
 
-set background=dark
-
 let s:bg              = s:black
-let s:bg_subtle       = s:light_black
-let s:bg_very_subtle  = s:subtle_black
-let s:bg_inverted     = s:lighter_grey
-let s:cyan            = s:light_cyan
-let s:green           = s:light_green
-let s:norm            = s:lighter_grey
+let s:bg_inverted     = s:light_grey
+let s:faint           = s:almost_black
+let s:norm            = s:light_grey
 let s:norm_inverted   = s:dark_grey
-let s:norm_subtle     = s:light_grey
-let s:purple          = s:light_purple
-let s:red             = s:light_red
-let s:visual          = s:lighter_black
+let s:subtle          = s:grey
 
-" https://github.com/noahfrederick/vim-hemisu/
+
+" UTILITY FUNCTION (https://github.com/noahfrederick/vim-hemisu) ---------------
+
 function! s:h(group, style)
     execute "highlight" a:group
                 \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
@@ -68,61 +62,49 @@ function! s:h(group, style)
                 \ "guisp="   (has_key(a:style, "sp")    ? a:style.sp.gui   : "NONE")
 endfunction
 
-call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
-call s:h("Cursor",        {"bg": s:blue, "fg": s:norm })
-call s:h("Comment",       {"fg": s:bg_subtle, "gui": "italic"})
 
-call s:h("Underlined",    {"fg": s:norm, "gui": "underline", "cterm": "underline"})
-call s:h("Ignore",        {"fg": s:bg})
-call s:h("Error",         {"fg": s:actual_white, "bg": s:red, "cterm": "bold"})
-call s:h("SpecialKey",    {"fg": s:light_green})
+" HIGHLIGHTING -----------------------------------------------------------------
+
+" Text
+call s:h("Comment",       {"fg": s:subtle, "gui": "italic"})
+call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
+call s:h("Title",         {"cterm": "bold"})
+
+" In-text
+call s:h("ColorColumn",   {"bg": s:faint})
+call s:h("CursorColumn",  {"bg": s:faint})
+call s:h("CursorLine",    {"cterm" : "none"})
+call s:h("DiffAdd",       {"fg": s:light_green})
+call s:h("DiffChange",    {"fg": s:dark_yellow})
+call s:h("DiffDelete",    {"fg": s:red})
+call s:h("DiffText",      {"fg": s:light_grey})
+call s:h("Folded",        {"fg": s:medium_grey})
+call s:h("IncSearch",     {"bg": s:yellow, "fg": s:grey})
+call s:h("MatchParen",    {"fg": s:norm, "bg": s:subtle})
 call s:h("NonText",       {"fg": s:medium_grey})
-call s:h("ErrorMsg",      {"fg": s:red})
-call s:h("IncSearch",     {"bg": s:yellow, "fg": s:light_black})
-call s:h("Search",        {"bg": s:bg_subtle, "fg": s:norm})
-call s:h("MoreMsg",       {"fg": s:medium_grey, "cterm": "bold", "gui": "bold"})
-call s:h("LineNr",        {"fg": s:bg_subtle})
+call s:h("Search",        {"bg": s:subtle, "fg": s:norm})
+call s:h("Visual",        {"bg": s:grey})
+
+" UI
 call s:h("CursorLineNr",  {"fg": s:bg_inverted})
+call s:h("FoldColumn",    {"fg": s:subtle})
+call s:h("LineNr",        {"fg": s:subtle})
+call s:h("MoreMsg",       {"fg": s:medium_grey, "cterm": "bold", "gui": "bold"})
+call s:h("Pmenu",         {"fg": s:norm, "bg": s:subtle})
+call s:h("PmenuSel",      {"fg": s:norm, "bg": s:blue})
 call s:h("Question",      {"fg": s:red})
-call s:h("StatusLineNC",  {"bg": s:bg_very_subtle})
+call s:h("SignColumn",    {"bg": s:bg})
 call s:h("StatusLine",    {"bg": s:bg_inverted, "fg": s:norm_inverted})
-call s:h("VertSplit",     {"bg": s:bg_very_subtle, "fg": s:bg_very_subtle})
-call s:h("Title",         {"fg": s:dark_blue})
-call s:h("Visual",        {"bg": s:visual})
-call s:h("VisualNOS",     {"bg": s:bg_subtle})
+call s:h("StatusLineNC",  {"bg": s:faint})
+call s:h("TabLine",       {"fg": s:norm, "bg": s:faint})
+call s:h("TabLineFill",   {"fg": s:norm, "bg": s:faint})
+call s:h("TabLineSel",    {"fg": s:norm_inverted, "bg": s:subtle, "gui": "bold", "cterm": "bold"})
+call s:h("VertSplit",     {"bg": s:faint, "fg": s:faint})
 call s:h("WarningMsg",    {"fg": s:red})
 call s:h("WildMenu",      {"fg": s:bg_inverted, "bg": s:norm_inverted})
-call s:h("Folded",        {"fg": s:medium_grey})
-call s:h("FoldColumn",    {"fg": s:bg_subtle})
-call s:h("DiffAdd",       {"fg": s:green})
-call s:h("DiffDelete",    {"fg": s:red})
-call s:h("DiffChange",    {"fg": s:dark_yellow})
-call s:h("DiffText",      {"fg": s:light_grey})
-call s:h("SignColumn",    {"fg": s:light_green})
-
-call s:h("Pmenu",         {"fg": s:norm, "bg": s:bg_subtle})
-call s:h("PmenuSel",      {"fg": s:norm, "bg": s:blue})
-call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_subtle})
-call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_subtle})
-call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_very_subtle})
-call s:h("TabLineSel",    {"fg": s:blue, "bg": s:bg_subtle, "gui": "bold", "cterm": "bold"})
-call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_very_subtle})
-call s:h("CursorColumn",  {"bg": s:bg_very_subtle})
-call s:h("CursorLine",    {"cterm" : "none"})
-call s:h("ColorColumn",   {"bg": s:bg_subtle})
-
-call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:norm})
-call s:h("qfLineNr",      {"fg": s:medium_grey})
-
-call s:h("htmlH1",        {"bg": s:bg, "fg": s:norm})
-call s:h("htmlH2",        {"bg": s:bg, "fg": s:norm})
-call s:h("htmlH3",        {"bg": s:bg, "fg": s:norm})
-call s:h("htmlH4",        {"bg": s:bg, "fg": s:norm})
-call s:h("htmlH5",        {"bg": s:bg, "fg": s:norm})
-call s:h("htmlH6",        {"bg": s:bg, "fg": s:norm})
 
 
-" LINKING
+" LINKING ----------------------------------------------------------------------
 
 hi!  link  VimCommentString  Comment
 
@@ -134,6 +116,3 @@ hi!  link  Type              Normal
 hi!  link  Special           Normal
 
 hi!  link  ModeMsg           MoreMsg
-
-hi   link  diffRemoved       DiffDelete
-hi   link  diffAdded         DiffAdd

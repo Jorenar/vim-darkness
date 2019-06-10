@@ -67,17 +67,18 @@ endfunction
 
 " Text
 call s:h("Comment",       {"fg": s:subtle, "gui": "italic"})
+call s:h("DiffAdd",       {"fg": s:light_green})
+call s:h("DiffChange",    {"fg": s:dark_yellow})
+call s:h("DiffDelete",    {"fg": s:red})
+call s:h("DiffText",      {"fg": s:light_grey})
 call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
 call s:h("Title",         {"cterm": "bold"})
+call s:h("Todo",          {"fg": s:norm_inverted, "bg": s:bg_inverted})
 
 " In-text
 call s:h("ColorColumn",   {"bg": s:faint})
 call s:h("CursorColumn",  {"bg": s:faint})
 call s:h("CursorLine",    {"cterm" : "none"})
-call s:h("DiffAdd",       {"fg": s:light_green})
-call s:h("DiffChange",    {"fg": s:dark_yellow})
-call s:h("DiffDelete",    {"fg": s:red})
-call s:h("DiffText",      {"fg": s:light_grey})
 call s:h("Folded",        {"fg": s:medium_grey})
 call s:h("IncSearch",     {"bg": s:yellow, "fg": s:grey})
 call s:h("MatchParen",    {"fg": s:norm, "bg": s:subtle})

@@ -1,6 +1,6 @@
 # Black&White Vim Colorscheme
 
-Simple Vim colorscheme focused on black and white with occasional color accents when needed.
+Simple dark Vim colorscheme focused on black and white with occasional color accents when needed.
 
 ![Screenshot](screenshot.png)
 
@@ -20,11 +20,4 @@ Just like any other color scheme:
 :colorscheme black_and_white
 ```
 
-You can toggle between the light and dark variants:
-
-```vim
-:set background=dark
-:set background=light
-```
-
-Like any other commands, you can add these to your `.vimrc`.
+Like any other command, you can add this to your `.vimrc`.

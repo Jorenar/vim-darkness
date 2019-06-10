@@ -36,38 +36,25 @@ let s:lighter_grey    = { "gui": "#C6C6C6", "cterm": "251" }
 let s:medium_grey     = { "gui": "#767676", "cterm": "243" }
 let s:dark_grey       = { "gui": "#1c1c1c", "cterm": "234" }
 let s:orange          = { "gui": "#D75F5F", "cterm": "167" }
-let s:pink            = { "gui": "#fb007a", "cterm": "9"   }
+let s:red             = { "gui": "#fb007a", "cterm": "9"   }
 let s:subtle_black    = { "gui": "#303030", "cterm": "236" }
 let s:white           = { "gui": "#F1F1F1", "cterm": "15"  }
 let s:yellow          = { "gui": "#F3E430", "cterm": "11"  }
 
-if &background == "dark"
-    let s:bg              = s:black
-    let s:bg_subtle       = s:light_black
-    let s:bg_very_subtle  = s:subtle_black
-    let s:bg_inverted     = s:lighter_grey
-    let s:cyan            = s:light_cyan
-    let s:green           = s:light_green
-    let s:norm            = s:lighter_grey
-    let s:norm_inverted   = s:dark_grey
-    let s:norm_subtle     = s:light_grey
-    let s:purple          = s:light_purple
-    let s:red             = s:light_red
-    let s:visual          = s:lighter_black
-else
-    let s:bg              = s:actual_white
-    let s:bg_subtle       = s:light_grey
-    let s:norm_inverted   = s:light_grey
-    let s:bg_inverted     = s:light_black
-    let s:bg_very_subtle  = s:lighter_grey
-    let s:cyan            = s:dark_cyan
-    let s:green           = s:dark_green
-    let s:norm            = s:light_black
-    let s:norm_subtle     = s:lighter_black
-    let s:purple          = s:dark_purple
-    let s:red             = s:dark_red
-    let s:visual          = s:light_blue
-endif
+set background=dark
+
+let s:bg              = s:black
+let s:bg_subtle       = s:light_black
+let s:bg_very_subtle  = s:subtle_black
+let s:bg_inverted     = s:lighter_grey
+let s:cyan            = s:light_cyan
+let s:green           = s:light_green
+let s:norm            = s:lighter_grey
+let s:norm_inverted   = s:dark_grey
+let s:norm_subtle     = s:light_grey
+let s:purple          = s:light_purple
+let s:red             = s:light_red
+let s:visual          = s:lighter_black
 
 " https://github.com/noahfrederick/vim-hemisu/
 function! s:h(group, style)
@@ -85,20 +72,17 @@ call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
 call s:h("Cursor",        {"bg": s:blue, "fg": s:norm })
 call s:h("Comment",       {"fg": s:bg_subtle, "gui": "italic"})
 
-
 call s:h("Underlined",    {"fg": s:norm, "gui": "underline", "cterm": "underline"})
 call s:h("Ignore",        {"fg": s:bg})
 call s:h("Error",         {"fg": s:actual_white, "bg": s:red, "cterm": "bold"})
-call s:h("Todo",          {"fg": s:actual_white, "bg": s:pink, "gui": "bold", "cterm": "bold"})
 call s:h("SpecialKey",    {"fg": s:light_green})
 call s:h("NonText",       {"fg": s:medium_grey})
-call s:h("Directory",     {"fg": s:dark_blue})
-call s:h("ErrorMsg",      {"fg": s:pink})
+call s:h("ErrorMsg",      {"fg": s:red})
 call s:h("IncSearch",     {"bg": s:yellow, "fg": s:light_black})
 call s:h("Search",        {"bg": s:bg_subtle, "fg": s:norm})
 call s:h("MoreMsg",       {"fg": s:medium_grey, "cterm": "bold", "gui": "bold"})
 call s:h("LineNr",        {"fg": s:bg_subtle})
-call s:h("CursorLineNr",  {"fg": s:white})
+call s:h("CursorLineNr",  {"fg": s:bg_inverted})
 call s:h("Question",      {"fg": s:red})
 call s:h("StatusLineNC",  {"bg": s:bg_very_subtle})
 call s:h("StatusLine",    {"bg": s:bg_inverted, "fg": s:norm_inverted})

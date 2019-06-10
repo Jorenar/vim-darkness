@@ -2,7 +2,7 @@
 " Version:    0.1.5
 " License:    The MIT License (MIT)
 "
-" A colorscheme meant to look like a more pleasant version of syntax off.
+" A colorscheme meant to look like a more pleasant version of syntax off
 "
 """
 
@@ -88,40 +88,13 @@ call s:h("Comment",       {"fg": s:bg_subtle, "gui": "italic"})
 hi! link VimCommentString Comment
 
 hi! link Constant         Normal
-hi! link Character        Constant
-hi! link Number           Constant
-hi! link Boolean          Constant
-hi! link Float            Constant
-hi! link String           Constant
-
 hi! link Identifier       Normal
-hi! link Function         Identifier
-
 hi! link Statement        Normal
-hi! link Conditonal       Statement
-hi! link Repeat           Statement
-hi! link Label            Statement
-hi! link Operator         Statement
-hi! link Keyword          Statement
-hi! link Exception        Statement
-
 hi! link PreProc          Normal
-hi! link Include          PreProc
-hi! link Define           PreProc
-hi! link Macro            PreProc
-hi! link PreCondit        PreProc
-
 hi! link Type             Normal
-hi! link StorageClass     Type
-hi! link Structure        Type
-hi! link Typedef          Type
-
 hi! link Special          Normal
-hi! link SpecialChar      Special
-hi! link Tag              Special
-hi! link Delimiter        Special
-hi! link SpecialComment   Special
-hi! link Debug            Special
+
+hi! link ModeMsg MoreMsg
 
 call s:h("Underlined",    {"fg": s:norm, "gui": "underline", "cterm": "underline"})
 call s:h("Ignore",        {"fg": s:bg})
@@ -134,7 +107,6 @@ call s:h("ErrorMsg",      {"fg": s:pink})
 call s:h("IncSearch",     {"bg": s:yellow, "fg": s:light_black})
 call s:h("Search",        {"bg": s:bg_subtle, "fg": s:norm})
 call s:h("MoreMsg",       {"fg": s:medium_grey, "cterm": "bold", "gui": "bold"})
-hi! link ModeMsg MoreMsg
 call s:h("LineNr",        {"fg": s:bg_subtle})
 call s:h("CursorLineNr",  {"fg": s:white})
 call s:h("Question",      {"fg": s:red})
@@ -189,12 +161,3 @@ call s:h("htmlH6",        {"bg": s:bg, "fg": s:norm})
 
 hi link diffRemoved       DiffDelete
 hi link diffAdded         DiffAdd
-
-" Signify, git-gutter
-hi link SignifySignAdd         LineNr
-hi link SignifySignDelete      LineNr
-hi link SignifySignChange      LineNr
-hi link GitGutterAdd           LineNr
-hi link GitGutterDelete        LineNr
-hi link GitGutterChange        LineNr
-hi link GitGutterChangeDelete  LineNr

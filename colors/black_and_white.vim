@@ -85,16 +85,6 @@ call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
 call s:h("Cursor",        {"bg": s:blue, "fg": s:norm })
 call s:h("Comment",       {"fg": s:bg_subtle, "gui": "italic"})
 
-hi! link VimCommentString Comment
-
-hi! link Constant         Normal
-hi! link Identifier       Normal
-hi! link Statement        Normal
-hi! link PreProc          Normal
-hi! link Type             Normal
-hi! link Special          Normal
-
-hi! link ModeMsg MoreMsg
 
 call s:h("Underlined",    {"fg": s:norm, "gui": "underline", "cterm": "underline"})
 call s:h("Ignore",        {"fg": s:bg})
@@ -126,18 +116,6 @@ call s:h("DiffChange",    {"fg": s:dark_yellow})
 call s:h("DiffText",      {"fg": s:light_grey})
 call s:h("SignColumn",    {"fg": s:light_green})
 
-if has("gui_running")
-    call s:h("SpellBad",    {"gui": "underline", "sp": s:red})
-    call s:h("SpellCap",    {"gui": "underline", "sp": s:light_green})
-    call s:h("SpellRare",   {"gui": "underline", "sp": s:pink})
-    call s:h("SpellLocal",  {"gui": "underline", "sp": s:dark_green})
-else
-    call s:h("SpellBad",    {"cterm": "underline", "fg": s:red})
-    call s:h("SpellCap",    {"cterm": "underline", "fg": s:light_green})
-    call s:h("SpellRare",   {"cterm": "underline", "fg": s:pink})
-    call s:h("SpellLocal",  {"cterm": "underline", "fg": s:dark_green})
-endif
-
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("PmenuSel",      {"fg": s:norm, "bg": s:blue})
 call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_subtle})
@@ -159,5 +137,19 @@ call s:h("htmlH4",        {"bg": s:bg, "fg": s:norm})
 call s:h("htmlH5",        {"bg": s:bg, "fg": s:norm})
 call s:h("htmlH6",        {"bg": s:bg, "fg": s:norm})
 
-hi link diffRemoved       DiffDelete
-hi link diffAdded         DiffAdd
+
+" LINKING
+
+hi!  link  VimCommentString  Comment
+
+hi!  link  Constant          Normal
+hi!  link  Identifier        Normal
+hi!  link  Statement         Normal
+hi!  link  PreProc           Normal
+hi!  link  Type              Normal
+hi!  link  Special           Normal
+
+hi!  link  ModeMsg           MoreMsg
+
+hi   link  diffRemoved       DiffDelete
+hi   link  diffAdded         DiffAdd

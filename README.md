@@ -17,7 +17,5 @@ For full support in which the airline theme is available, install using Pathogen
 Just like any other color scheme:
 
 ```vim
-:colorscheme black_and_white
+colorscheme black_and_white
 ```
-
-Like any other command, you can add this to your `.vimrc`.

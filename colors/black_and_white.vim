@@ -1,5 +1,4 @@
 " Name:       black_and_white.vim
-" Version:    0.2.0
 " License:    The MIT License (MIT)
 "
 " A colorscheme meant to look like a more pleasant version of syntax off
@@ -54,11 +53,11 @@ let s:subtle          = s:grey
 function! s:h(group, style)
     execute "highlight" a:group
                 \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
-                \ "ctermbg=" (has_key(a:style, "bg")    ? a:style.bg.cterm : "NONE")
                 \ "ctermfg=" (has_key(a:style, "fg")    ? a:style.fg.cterm : "NONE")
+                \ "ctermbg=" (has_key(a:style, "bg")    ? a:style.bg.cterm : "NONE")
                 \ "gui="     (has_key(a:style, "gui")   ? a:style.gui      : "NONE")
-                \ "guibg="   (has_key(a:style, "bg")    ? a:style.bg.gui   : "NONE")
                 \ "guifg="   (has_key(a:style, "fg")    ? a:style.fg.gui   : "NONE")
+                \ "guibg="   (has_key(a:style, "bg")    ? a:style.bg.gui   : "NONE")
                 \ "guisp="   (has_key(a:style, "sp")    ? a:style.sp.gui   : "NONE")
 endfunction
 
@@ -71,19 +70,20 @@ call s:h("DiffAdd",       {"fg": s:light_green})
 call s:h("DiffChange",    {"fg": s:dark_yellow})
 call s:h("DiffDelete",    {"fg": s:red})
 call s:h("DiffText",      {"fg": s:light_grey})
-call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
+call s:h("Normal",        {"fg": s:norm, "bg": s:bg})
 call s:h("Title",         {"cterm": "bold"})
+call s:h("Underlined",    {"fg": s:norm, "gui": "underline", "cterm": "underline"})
 
 " In-text
 call s:h("ColorColumn",   {"bg": s:faint})
 call s:h("CursorColumn",  {"bg": s:faint})
 call s:h("CursorLine",    {"cterm" : "none"})
 call s:h("Folded",        {"fg": s:medium_grey})
-call s:h("IncSearch",     {"bg": s:yellow, "fg": s:grey})
+call s:h("IncSearch",     {"fg": s:grey, "bg": s:yellow})
 call s:h("MatchParen",    {"fg": s:norm, "bg": s:subtle})
 call s:h("NonText",       {"fg": s:medium_grey})
-call s:h("Search",        {"bg": s:subtle, "fg": s:norm})
-call s:h("Visual",        {"bg": s:grey})
+call s:h("Search",        {"fg": s:norm, "bg": s:subtle})
+call s:h("Visual",        {"bg": s:norm_inverted})
 
 " UI
 call s:h("CursorLineNr",  {"fg": s:bg_inverted})
@@ -99,7 +99,7 @@ call s:h("StatusLineNC",  {"bg": s:faint})
 call s:h("TabLine",       {"fg": s:norm, "bg": s:faint})
 call s:h("TabLineFill",   {"fg": s:norm, "bg": s:faint})
 call s:h("TabLineSel",    {"fg": s:norm_inverted, "bg": s:bg_inverted})
-call s:h("VertSplit",     {"bg": s:faint, "fg": s:faint})
+call s:h("VertSplit",     {"fg": s:faint, "bg": s:faint})
 call s:h("WarningMsg",    {"fg": s:red})
 call s:h("WildMenu",      {"fg": s:bg_inverted, "bg": s:norm_inverted})
 

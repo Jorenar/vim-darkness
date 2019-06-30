@@ -22,24 +22,24 @@ let g:colors_name='black_and_white'
 
 " DEFINE REUSABLE COLORS ------------------------------------------------------
 
-let s:almost_black    = { "gui": "#303030", "cterm": "233" }
-let s:black           = { "gui": "#000000", "cterm": "16"   }
-let s:blue            = { "gui": "#20BBFC", "cterm": "12"  }
-let s:dark_blue       = { "gui": "#008EC4", "cterm": "4"   }
-let s:dark_cyan       = { "gui": "#20A5BA", "cterm": "6"   }
-let s:dark_green      = { "gui": "#10A778", "cterm": "2"   }
-let s:dark_grey       = { "gui": "#1c1c1c", "cterm": "236" }
-let s:dark_red        = { "gui": "#C30771", "cterm": "1"   }
-let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
-let s:darker_blue     = { "gui": "#005F87", "cterm": "18"  }
-let s:darker_grey     = { "gui": "#303030", "cterm": "234" }
-let s:grey            = { "gui": "#424242", "cterm": "8"   }
-let s:light_green     = { "gui": "#5FD7A7", "cterm": "10"  }
-let s:light_grey      = { "gui": "#B2B2B2", "cterm": "249" }
-let s:medium_grey     = { "gui": "#767676", "cterm": "243" }
-let s:red             = { "gui": "#fb007a", "cterm": "9"   }
-let s:white           = { "gui": "#FFFFFF", "cterm": "15"  }
-let s:yellow          = { "gui": "#F3E430", "cterm": "11"  }
+let s:almost_black    = 233
+let s:black           = 16
+let s:blue            = 12
+let s:dark_blue       = 4
+let s:dark_cyan       = 6
+let s:dark_green      = 2
+let s:dark_grey       = 236
+let s:dark_red        = 1
+let s:dark_yellow     = 3
+let s:darker_blue     = 18
+let s:darker_grey     = 234
+let s:grey            = 8
+let s:light_green     = 10
+let s:light_grey      = 249
+let s:medium_grey     = 243
+let s:red             = 9
+let s:white           = 15
+let s:yellow          = 11
 
 let s:bg              = s:black
 let s:bg_inverted     = s:light_grey
@@ -54,31 +54,27 @@ let s:subtle          = s:grey
 function! s:h(group, style)
     execute "highlight" a:group
                 \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
-                \ "ctermfg=" (has_key(a:style, "fg")    ? a:style.fg.cterm : "NONE")
-                \ "ctermbg=" (has_key(a:style, "bg")    ? a:style.bg.cterm : "NONE")
-                \ "gui="     (has_key(a:style, "gui")   ? a:style.gui      : "NONE")
-                \ "guifg="   (has_key(a:style, "fg")    ? a:style.fg.gui   : "NONE")
-                \ "guibg="   (has_key(a:style, "bg")    ? a:style.bg.gui   : "NONE")
-                \ "guisp="   (has_key(a:style, "sp")    ? a:style.sp.gui   : "NONE")
+                \ "ctermfg=" (has_key(a:style, "fg")    ? a:style.fg : "NONE")
+                \ "ctermbg=" (has_key(a:style, "bg")    ? a:style.bg : "NONE")
 endfunction
 
 
 " HIGHLIGHTING ----------------------------------------------------------------
 
 " Text
-call s:h("Comment",       {"fg": s:subtle, "gui": "italic"})
+call s:h("Comment",       {"fg": s:subtle})
 call s:h("DiffAdd",       {"fg": s:light_green})
 call s:h("DiffChange",    {"fg": s:dark_yellow})
 call s:h("DiffDelete",    {"fg": s:red})
 call s:h("DiffText",      {"fg": s:light_grey})
 call s:h("Normal",        {"fg": s:norm, "bg": s:bg})
 call s:h("Title",         {"cterm": "bold"})
-call s:h("Underlined",    {"fg": s:norm, "cterm": "underline", "gui": "underline"})
+call s:h("Underlined",    {"fg": s:norm, "cterm": "underline"})
 
 " In-text
 call s:h("ColorColumn",   {"bg": s:almost_black})
 call s:h("CursorColumn",  {"bg": s:faint})
-call s:h("CursorLine",    {"cterm" : "none"})
+call s:h("CursorLine",    {})
 call s:h("Folded",        {"fg": s:medium_grey})
 call s:h("IncSearch",     {"fg": s:grey, "bg": s:yellow})
 call s:h("MatchParen",    {"fg": s:norm, "bg": s:subtle})
@@ -90,7 +86,7 @@ call s:h("Visual",        {"bg": s:norm_inverted})
 call s:h("CursorLineNr",  {"fg": s:bg_inverted})
 call s:h("FoldColumn",    {"fg": s:subtle})
 call s:h("LineNr",        {"fg": s:subtle})
-call s:h("MoreMsg",       {"fg": s:medium_grey, "cterm": "bold", "gui": "bold"})
+call s:h("MoreMsg",       {"fg": s:medium_grey, "cterm": "bold"})
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:subtle})
 call s:h("PmenuSel",      {"fg": s:norm, "bg": s:blue})
 call s:h("Question",      {"fg": s:red})
@@ -103,7 +99,7 @@ call s:h("TabLineSel",    {"fg": s:norm_inverted, "bg": s:bg_inverted})
 call s:h("VertSplit",     {"fg": s:faint, "bg": s:faint})
 call s:h("WarningMsg",    {"fg": s:red})
 call s:h("WildMenu",      {"fg": s:bg_inverted, "bg": s:norm_inverted})
-call s:h("QuickFixLine",  {"cterm": "underline", "gui": "underline"})
+call s:h("QuickFixLine",  {"cterm": "underline"})
 
 
 " LINKING ---------------------------------------------------------------------

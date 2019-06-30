@@ -5,7 +5,7 @@
 "
 """
 
-" SETUP ------------------------------------------------------------------------
+" SETUP -----------------------------------------------------------------------
 
 " Set background to dark
 set background=dark
@@ -20,9 +20,9 @@ endif
 let g:colors_name='black_and_white'
 
 
-" DEFINE REUSABLE COLORS -------------------------------------------------------
+" DEFINE REUSABLE COLORS ------------------------------------------------------
 
-let s:almost_black    = { "gui": "#303030", "cterm": "234" }
+let s:almost_black    = { "gui": "#303030", "cterm": "233" }
 let s:black           = { "gui": "#000000", "cterm": "16"   }
 let s:blue            = { "gui": "#20BBFC", "cterm": "12"  }
 let s:dark_blue       = { "gui": "#008EC4", "cterm": "4"   }
@@ -32,6 +32,7 @@ let s:dark_grey       = { "gui": "#1c1c1c", "cterm": "236" }
 let s:dark_red        = { "gui": "#C30771", "cterm": "1"   }
 let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
 let s:darker_blue     = { "gui": "#005F87", "cterm": "18"  }
+let s:darker_grey     = { "gui": "#303030", "cterm": "234" }
 let s:grey            = { "gui": "#424242", "cterm": "8"   }
 let s:light_green     = { "gui": "#5FD7A7", "cterm": "10"  }
 let s:light_grey      = { "gui": "#B2B2B2", "cterm": "249" }
@@ -42,13 +43,13 @@ let s:yellow          = { "gui": "#F3E430", "cterm": "11"  }
 
 let s:bg              = s:black
 let s:bg_inverted     = s:light_grey
-let s:faint           = s:almost_black
+let s:faint           = s:darker_grey
 let s:norm            = s:light_grey
 let s:norm_inverted   = s:dark_grey
 let s:subtle          = s:grey
 
 
-" UTILITY FUNCTION (https://github.com/noahfrederick/vim-hemisu) ---------------
+" UTILITY FUNCTION (https://github.com/noahfrederick/vim-hemisu) --------------
 
 function! s:h(group, style)
     execute "highlight" a:group
@@ -62,7 +63,7 @@ function! s:h(group, style)
 endfunction
 
 
-" HIGHLIGHTING -----------------------------------------------------------------
+" HIGHLIGHTING ----------------------------------------------------------------
 
 " Text
 call s:h("Comment",       {"fg": s:subtle, "gui": "italic"})
@@ -72,10 +73,10 @@ call s:h("DiffDelete",    {"fg": s:red})
 call s:h("DiffText",      {"fg": s:light_grey})
 call s:h("Normal",        {"fg": s:norm, "bg": s:bg})
 call s:h("Title",         {"cterm": "bold"})
-call s:h("Underlined",    {"fg": s:norm, "gui": "underline", "cterm": "underline"})
+call s:h("Underlined",    {"fg": s:norm, "cterm": "underline", "gui": "underline"})
 
 " In-text
-call s:h("ColorColumn",   {"bg": s:faint})
+call s:h("ColorColumn",   {"bg": s:almost_black})
 call s:h("CursorColumn",  {"bg": s:faint})
 call s:h("CursorLine",    {"cterm" : "none"})
 call s:h("Folded",        {"fg": s:medium_grey})
@@ -102,9 +103,10 @@ call s:h("TabLineSel",    {"fg": s:norm_inverted, "bg": s:bg_inverted})
 call s:h("VertSplit",     {"fg": s:faint, "bg": s:faint})
 call s:h("WarningMsg",    {"fg": s:red})
 call s:h("WildMenu",      {"fg": s:bg_inverted, "bg": s:norm_inverted})
+call s:h("QuickFixLine",  {"cterm": "underline", "gui": "underline"})
 
 
-" LINKING ----------------------------------------------------------------------
+" LINKING ---------------------------------------------------------------------
 
 hi!  link  VimCommentString  Comment
 

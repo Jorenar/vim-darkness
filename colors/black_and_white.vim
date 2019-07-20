@@ -40,6 +40,7 @@ let s:medium_grey     = 243
 let s:red             = 9
 let s:white           = 15
 let s:yellow          = 11
+let s:yellowish       = 229
 
 let s:bg              = s:black
 let s:bg_inverted     = s:light_grey
@@ -49,13 +50,13 @@ let s:norm_inverted   = s:dark_grey
 let s:subtle          = s:grey
 
 
-" UTILITY FUNCTION (https://github.com/noahfrederick/vim-hemisu) --------------
+" UTILITY FUNCTION ------------------------------------------------------------
 
 function! s:h(group, style)
     execute "highlight" a:group
-                \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
-                \ "ctermfg=" (has_key(a:style, "fg")    ? a:style.fg : "NONE")
-                \ "ctermbg=" (has_key(a:style, "bg")    ? a:style.bg : "NONE")
+                \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm : "NONE")
+                \ "ctermfg=" (has_key(a:style, "fg")    ? a:style.fg    : "NONE")
+                \ "ctermbg=" (has_key(a:style, "bg")    ? a:style.bg    : "NONE")
 endfunction
 
 
@@ -69,12 +70,13 @@ call s:h("DiffDelete",    {"fg": s:red})
 call s:h("DiffText",      {"fg": s:light_grey})
 call s:h("Normal",        {"fg": s:norm, "bg": s:bg})
 call s:h("Title",         {"cterm": "bold"})
+call s:h("Todo",          {"fg": s:white, "cterm": "bold,underline"})
 call s:h("Underlined",    {"fg": s:norm, "cterm": "underline"})
 
 " In-text
 call s:h("ColorColumn",   {"bg": s:almost_black})
 call s:h("CursorColumn",  {"bg": s:faint})
-call s:h("CursorLine",    {})
+call s:h("CursorLine",    {"bg": s:faint})
 call s:h("Folded",        {"fg": s:medium_grey})
 call s:h("IncSearch",     {"fg": s:grey, "bg": s:yellow})
 call s:h("MatchParen",    {"fg": s:norm, "bg": s:subtle})
@@ -88,8 +90,9 @@ call s:h("FoldColumn",    {"fg": s:subtle})
 call s:h("LineNr",        {"fg": s:subtle})
 call s:h("MoreMsg",       {"fg": s:medium_grey, "cterm": "bold"})
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:subtle})
-call s:h("PmenuSel",      {"fg": s:norm, "bg": s:blue})
+call s:h("PmenuSel",      {"fg": s:norm, "bg": s:dark_grey})
 call s:h("Question",      {"fg": s:red})
+call s:h("QuickFixLine",  {"cterm": "underline"})
 call s:h("SignColumn",    {"bg": s:bg})
 call s:h("StatusLine",    {"fg": s:norm_inverted, "bg": s:bg_inverted})
 call s:h("StatusLineNC",  {"bg": s:subtle})
@@ -97,9 +100,8 @@ call s:h("TabLine",       {"fg": s:norm, "bg": s:faint})
 call s:h("TabLineFill",   {"fg": s:norm, "bg": s:faint})
 call s:h("TabLineSel",    {"fg": s:norm_inverted, "bg": s:bg_inverted})
 call s:h("VertSplit",     {"fg": s:faint, "bg": s:faint})
-call s:h("WarningMsg",    {"fg": s:red})
+call s:h("WarningMsg",    {"fg": s:yellowish})
 call s:h("WildMenu",      {"fg": s:bg_inverted, "bg": s:norm_inverted})
-call s:h("QuickFixLine",  {"cterm": "underline"})
 
 
 " LINKING ---------------------------------------------------------------------

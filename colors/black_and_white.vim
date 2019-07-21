@@ -65,9 +65,9 @@ endfunction
 " Text
 call s:h("Comment",       {"fg": s:subtle})
 call s:h("DiffAdd",       {"fg": s:dark_green})
-call s:h("DiffChange",    {"fg": s:dark_yellow})
+call s:h("DiffChange",    {"fg": s:white})
 call s:h("DiffDelete",    {"fg": s:red})
-call s:h("DiffText",      {"fg": s:dark_blue})
+call s:h("DiffText",      {"fg": s:dark_cyan})
 call s:h("Normal",        {"fg": s:norm, "bg": s:bg})
 call s:h("Title",         {"cterm": "bold"})
 call s:h("Todo",          {"fg": s:white, "cterm": "bold,underline"})

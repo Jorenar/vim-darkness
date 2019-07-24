@@ -18,3 +18,7 @@ Just like any other color scheme:
 ```vim
 colorscheme black_and_white
 ```
+
+---
+
+Based on [pbrisbin/vim-colors-off](https://github.com/pbrisbin/vim-colors-off)

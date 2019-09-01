@@ -1,9 +1,5 @@
 " Name:       black_and_white.vim
 " License:    The MIT License (MIT)
-"
-" A colorscheme meant to look like a more pleasant version of syntax off
-"
-"""
 
 " SETUP -----------------------------------------------------------------------
 
@@ -22,32 +18,34 @@ let g:colors_name='black_and_white'
 
 " DEFINE REUSABLE COLORS ------------------------------------------------------
 
-let s:almost_black    = 233
-let s:black           = 16
-let s:blue            = 12
-let s:dark_blue       = 4
-let s:dark_cyan       = 6
-let s:dark_green      = 2
-let s:dark_grey       = 236
-let s:dark_red        = 1
-let s:dark_yellow     = 3
-let s:darker_blue     = 18
-let s:darker_grey     = 234
-let s:grey            = 8
-let s:light_green     = 10
-let s:light_grey      = 249
-let s:medium_grey     = 243
-let s:red             = 9
-let s:white           = 15
-let s:yellow          = 11
-let s:yellowish       = 229
+let s:almost_black      = 233
+let s:black             = 16
+let s:blue              = 12
+let s:dark_blue         = 4
+let s:dark_cyan         = 6
+let s:dark_green        = 2
+let s:dark_grey         = 236
+let s:dark_red          = 1
+let s:dark_yellow       = 3
+let s:darker_blue       = 18
+let s:darker_grey       = 234
+let s:grey              = 8
+let s:light_green       = 10
+let s:light_grey        = 249
+let s:light_steel_blue  = 146
+let s:medium_grey       = 243
+let s:red               = 9
+let s:white             = 15
+let s:yellow            = 11
+let s:yellowish         = 229
 
-let s:bg              = s:black
-let s:bg_inverted     = s:light_grey
-let s:faint           = s:darker_grey
-let s:norm            = s:light_grey
-let s:norm_inverted   = s:dark_grey
-let s:subtle          = s:grey
+
+let s:bg                = s:black
+let s:bg_inverted       = s:light_grey
+let s:faint             = s:darker_grey
+let s:norm              = s:light_grey
+let s:norm_inverted     = s:dark_grey
+let s:subtle            = s:grey
 
 
 " UTILITY FUNCTION ------------------------------------------------------------
@@ -77,7 +75,7 @@ call s:h("Underlined",    {"fg": s:norm, "cterm": "underline"})
 call s:h("ColorColumn",   {"bg": s:almost_black})
 call s:h("CursorColumn",  {"bg": s:faint})
 call s:h("CursorLine",    {"bg": s:faint})
-call s:h("Folded",        {"fg": s:medium_grey})
+call s:h("Folded",        {"fg": s:light_steel_blue})
 call s:h("IncSearch",     {"fg": s:grey, "bg": s:yellow})
 call s:h("MatchParen",    {"fg": s:norm, "bg": s:subtle})
 call s:h("NonText",       {"fg": s:medium_grey})

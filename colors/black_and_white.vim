@@ -33,7 +33,7 @@ let s:grey              = 8
 let s:light_green       = 10
 let s:light_grey        = 249
 let s:light_steel_blue  = 146
-let s:medium_grey       = 243
+let s:medium_grey       = 188
 let s:red               = 9
 let s:white             = 15
 let s:yellow            = 11
@@ -75,10 +75,10 @@ call s:h("Underlined",    {"fg": s:norm, "cterm": "underline"})
 call s:h("ColorColumn",   {"bg": s:almost_black})
 call s:h("CursorColumn",  {"bg": s:faint})
 call s:h("CursorLine",    {"bg": s:faint})
-call s:h("Folded",        {"fg": s:light_steel_blue})
+call s:h("Folded",        {"fg": s:medium_grey, "cterm": "italic"})
 call s:h("IncSearch",     {"fg": s:grey, "bg": s:yellow})
 call s:h("MatchParen",    {"fg": s:norm, "bg": s:subtle})
-call s:h("NonText",       {"fg": s:medium_grey})
+call s:h("NonText",       {"fg": s:grey})
 call s:h("Search",        {"fg": s:norm, "bg": s:subtle})
 call s:h("Visual",        {"bg": s:norm_inverted})
 
@@ -86,7 +86,7 @@ call s:h("Visual",        {"bg": s:norm_inverted})
 call s:h("CursorLineNr",  {"fg": s:bg_inverted})
 call s:h("FoldColumn",    {"fg": s:subtle})
 call s:h("LineNr",        {"fg": s:subtle})
-call s:h("MoreMsg",       {"fg": s:medium_grey, "cterm": "bold"})
+call s:h("MoreMsg",       {"fg": s:grey, "cterm": "bold"})
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:subtle})
 call s:h("PmenuSel",      {"fg": s:norm, "bg": s:dark_grey})
 call s:h("Question",      {"fg": s:red})

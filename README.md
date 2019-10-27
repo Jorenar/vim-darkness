@@ -1,6 +1,6 @@
 # Darkness: Vim Colorscheme
 
-Simple dark Vim colorscheme focused on black and white with occasional color accents when needed.
+Simple monochrome Vim colorscheme focused on indulgeing into the darkness
 
 ![Screenshot](screenshot.png)
 

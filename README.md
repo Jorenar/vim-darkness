@@ -1,4 +1,4 @@
-# Black&White Vim Colorscheme
+# Darkness: Vim Colorscheme
 
 Simple dark Vim colorscheme focused on black and white with occasional color accents when needed.
 
@@ -16,7 +16,7 @@ You can also use plugin manager of your choice.
 Just like any other color scheme:
 
 ```vim
-colorscheme black_and_white
+colorscheme darkness
 ```
 
 ---

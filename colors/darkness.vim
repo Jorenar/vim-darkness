@@ -1,4 +1,4 @@
-" Name:       black_and_white.vim
+" Name:       Darkness
 " License:    The MIT License (MIT)
 
 " SETUP -----------------------------------------------------------------------
@@ -13,7 +13,7 @@ if exists('syntax on')
 endif
 
 " Declare theme name
-let g:colors_name='black_and_white'
+let g:colors_name='darkness'
 
 
 " DEFINE REUSABLE COLORS ------------------------------------------------------

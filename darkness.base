@@ -1,0 +1,87 @@
+# VARS #
+
+almost_black      233
+black             16
+blue              12
+dark_blue         4
+dark_cyan         6
+dark_green        2
+dark_grey         236
+dark_red          1
+dark_yellow       3
+darker_blue       18
+darker_grey       234
+grey              240
+light_green       10
+light_grey        249
+light_steel_blue  146
+medium_grey       245
+red               9
+white             15
+yellow            11
+yellowish         229
+
+
+# ALIASES #
+
+bg                black
+faint             darker_grey
+norm              light_grey
+norm_inverted     dark_grey
+subtle            grey
+
+# HIGHLIGHTS #
+
+Comment        NONE             subtle        NONE
+DiffAdd        NONE             dark_green    NONE
+DiffChange     NONE             white         NONE
+DiffDelete     NONE             red           NONE
+DiffText       NONE             dark_cyan     NONE
+Normal         NONE             norm          bg
+Title          bold             NONE            NONE
+Todo           bold,underline   white         NONE
+Underlined     underline        norm          NONE
+
+
+ColorColumn    NONE             NONE            almost_black
+CursorColumn   NONE             NONE            faint
+CursorLine     NONE             NONE            faint
+Folded         italic           medium_grey   NONE
+IncSearch      NONE             grey          yellow
+MatchParen     NONE             norm          subtle
+NonText        NONE             grey          NONE
+Search         NONE             norm          subtle
+Visual         NONE             NONE            norm_inverted
+
+
+CursorLineNr   NONE             white         NONE
+FoldColumn     NONE             subtle        NONE
+LineNr         NONE             subtle        NONE
+MoreMsg        bold             grey          NONE
+Pmenu          NONE             norm          subtle
+PmenuSel       NONE             norm          dark_grey
+Question       NONE             red           NONE
+QuickFixLine   underline        NONE            NONE
+SignColumn     NONE             NONE            bg
+StatusLine     NONE             medium_grey   almost_black
+StatusLineNC   NONE             subtle        faint
+TabLine        NONE             subtle        faint
+TabLineFill    NONE             norm          faint
+TabLineSel     NONE             norm          almost_black
+VertSplit      NONE             faint         faint
+WarningMsg     NONE             yellowish     NONE
+WildMenu       NONE             norm          norm_inverted
+
+
+# LINKS #
+
+VimCommentString  Comment
+
+Constant          Normal
+Identifier        Normal
+Statement         Normal
+PreProc           Normal
+Type              Normal
+Special           Normal
+
+ModeMsg           MoreMsg

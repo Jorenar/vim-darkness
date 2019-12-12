@@ -1,4 +1,4 @@
-# VARS #
+~ VARS
 
 almost_black      233
 black             16
@@ -22,7 +22,7 @@ yellow            11
 yellowish         229
 
 
-# ALIASES #
+~ ALIASES
 
 bg                black
 faint             darker_grey
@@ -30,7 +30,8 @@ norm              light_grey
 norm_inverted     dark_grey
 subtle            grey
 
-# HIGHLIGHTS #
+
+~ HIGHLIGHTS
 
 Comment        NONE             subtle        NONE
 DiffAdd        NONE             dark_green    NONE
@@ -42,7 +43,6 @@ Title          bold             NONE            NONE
 Todo           bold,underline   white         NONE
 Underlined     underline        norm          NONE
 
-
 ColorColumn    NONE             NONE            almost_black
 CursorColumn   NONE             NONE            faint
 CursorLine     NONE             NONE            faint
@@ -52,7 +52,6 @@ MatchParen     NONE             norm          subtle
 NonText        NONE             grey          NONE
 Search         NONE             norm          subtle
 Visual         NONE             NONE            norm_inverted
-
 
 CursorLineNr   NONE             white         NONE
 FoldColumn     NONE             subtle        NONE
@@ -73,7 +72,7 @@ WarningMsg     NONE             yellowish     NONE
 WildMenu       NONE             norm          norm_inverted
 
 
-# LINKS #
+~ LINKS
 
 VimCommentString  Comment
 

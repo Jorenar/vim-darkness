@@ -14,13 +14,13 @@ with open(filename + ".vim", "w") as base:
     with open(filename) as base_raw:
         for line in base_raw.read().splitlines():
             if line:
-                if line == "# VARS #":
+                if line == "~ VARS":
                     vars = 1
-                elif line == "# ALIASES #":
+                elif line == "~ ALIASES":
                     aliases = 1
-                elif line == "# HIGHLIGHTS #":
+                elif line == "~ HIGHLIGHTS":
                     highlights = 1
-                elif line == "# LINKS #":
+                elif line == "~ LINKS":
                     links = 1
                 else:
                     line = line.split()

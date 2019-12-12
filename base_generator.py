@@ -13,6 +13,7 @@ links      = 0
 with open(filename + ".vim", "w") as base:
     with open(filename) as base_raw:
         for line in base_raw.read().splitlines():
+            line = line.split('#', 1)[0]
             if line:
                 if line == "~ VARS":
                     vars = 1

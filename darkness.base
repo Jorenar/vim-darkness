@@ -33,6 +33,7 @@ subtle            grey
 
 ~ HIGHLIGHTS
 
+# Text
 Comment        NONE             subtle        NONE
 DiffAdd        NONE             dark_green    NONE
 DiffChange     NONE             white         NONE
@@ -43,6 +44,7 @@ Title          bold             NONE            NONE
 Todo           bold,underline   white         NONE
 Underlined     underline        norm          NONE
 
+# In-text
 ColorColumn    NONE             NONE            almost_black
 CursorColumn   NONE             NONE            faint
 CursorLine     NONE             NONE            faint
@@ -53,6 +55,7 @@ NonText        NONE             grey          NONE
 Search         NONE             norm          subtle
 Visual         NONE             NONE            norm_inverted
 
+# UI
 CursorLineNr   NONE             white         NONE
 FoldColumn     NONE             subtle        NONE
 LineNr         NONE             subtle        NONE
@@ -84,3 +87,5 @@ Type              Normal
 Special           Normal
 
 ModeMsg           MoreMsg
+
+# vim: set ft=conf:

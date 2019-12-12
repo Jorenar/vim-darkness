@@ -18,7 +18,3 @@ Just like any other color scheme:
 ```vim
 colorscheme darkness
 ```
-
----
-
-Based on [pbrisbin/vim-colors-off](https://github.com/pbrisbin/vim-colors-off)

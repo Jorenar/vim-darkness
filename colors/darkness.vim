@@ -4,18 +4,12 @@
 
 " SETUP -----------------------------------------------------------------------
 
-" Set background to dark
-set background=dark
-
-" Reset syntax highlighting
 hi clear
 if exists('syntax on')
     syntax reset
 endif
-
-" Declare theme name
 let g:colors_name='darkness'
-
+set background=dark
 
 " HIGHLIGHTS ------------------------------------------------------------------
 

@@ -34,45 +34,45 @@ subtle            grey
 ~ HIGHLIGHTS
 
 # Text
-Comment        NONE             subtle        NONE
-DiffAdd        NONE             dark_green    NONE
-DiffChange     NONE             white         NONE
-DiffDelete     NONE             red           NONE
-DiffText       NONE             dark_cyan     NONE
-Normal         NONE             norm          bg
-Title          bold             NONE            NONE
-Todo           bold,underline   white         NONE
-Underlined     underline        norm          NONE
+Comment       NONE            subtle       NONE
+DiffAdd       NONE            dark_green   NONE
+DiffChange    NONE            white        NONE
+DiffDelete    NONE            red          NONE
+DiffText      NONE            dark_cyan    NONE
+Normal        NONE            norm         bg
+Title         bold            NONE         NONE
+Todo          bold,underline  white        NONE
+Underlined    underline       norm         NONE
 
 # In-text
-ColorColumn    NONE             NONE            almost_black
-CursorColumn   NONE             NONE            faint
-CursorLine     NONE             NONE            faint
-Folded         italic           medium_grey   NONE
-IncSearch      NONE             grey          yellow
-MatchParen     NONE             norm          subtle
-NonText        NONE             grey          NONE
-Search         NONE             norm          subtle
-Visual         NONE             NONE            norm_inverted
+ColorColumn   NONE            NONE         almost_black
+CursorColumn  NONE            NONE         faint
+CursorLine    NONE            NONE         faint
+Folded        italic          medium_grey  NONE
+IncSearch     NONE            grey         yellow
+MatchParen    NONE            norm         subtle
+NonText       NONE            grey         NONE
+Search        NONE            norm         subtle
+Visual        NONE            NONE         norm_inverted
 
 # UI
-CursorLineNr   NONE             white         NONE
-FoldColumn     NONE             subtle        NONE
-LineNr         NONE             subtle        NONE
-MoreMsg        bold             grey          NONE
-Pmenu          NONE             norm          subtle
-PmenuSel       NONE             norm          dark_grey
-Question       NONE             red           NONE
-QuickFixLine   underline        NONE            NONE
-SignColumn     NONE             NONE            bg
-StatusLine     NONE             medium_grey   almost_black
-StatusLineNC   NONE             subtle        faint
-TabLine        NONE             subtle        faint
-TabLineFill    NONE             norm          faint
-TabLineSel     NONE             norm          almost_black
-VertSplit      NONE             faint         faint
-WarningMsg     NONE             yellowish     NONE
-WildMenu       NONE             norm          norm_inverted
+CursorLineNr  NONE            white        NONE
+FoldColumn    NONE            subtle       NONE
+LineNr        NONE            subtle       NONE
+MoreMsg       bold            grey         NONE
+Pmenu         NONE            norm         subtle
+PmenuSel      NONE            norm         dark_grey
+Question      NONE            red          NONE
+QuickFixLine  underline       NONE         NONE
+SignColumn    NONE            NONE         bg
+StatusLine    NONE            medium_grey  almost_black
+StatusLineNC  NONE            subtle       faint
+TabLine       NONE            subtle       faint
+TabLineFill   NONE            norm         faint
+TabLineSel    NONE            norm         almost_black
+VertSplit     NONE            faint        faint
+WarningMsg    NONE            yellowish    NONE
+WildMenu      NONE            norm         norm_inverted
 
 
 ~ LINKS

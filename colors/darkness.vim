@@ -4,12 +4,12 @@
 
 " SETUP -----------------------------------------------------------------------
 
+set background=dark
 hi clear
 if exists('syntax on')
     syntax reset
 endif
 let g:colors_name='darkness'
-set background=dark
 
 " HIGHLIGHTS ------------------------------------------------------------------
 

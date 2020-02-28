@@ -71,7 +71,7 @@ TabLine       NONE            subtle       faint
 TabLineFill   NONE            norm         faint
 TabLineSel    NONE            norm         almost_black
 VertSplit     NONE            faint        faint
-WarningMsg    NONE            yellowish    NONE
+WarningMsg    NONE            black        yellow
 WildMenu      NONE            norm         norm_inverted
 
 

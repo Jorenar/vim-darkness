@@ -46,7 +46,7 @@ hi! TabLine cterm=NONE ctermfg=240 ctermbg=234
 hi! TabLineFill cterm=NONE ctermfg=249 ctermbg=234
 hi! TabLineSel cterm=NONE ctermfg=249 ctermbg=233
 hi! VertSplit cterm=NONE ctermfg=234 ctermbg=234
-hi! WarningMsg cterm=NONE ctermfg=229 ctermbg=NONE
+hi! WarningMsg cterm=NONE ctermfg=16 ctermbg=11
 hi! WildMenu cterm=NONE ctermfg=249 ctermbg=236
 hi! link VimCommentString Comment
 hi! link Constant Normal
